@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WEBMAP|BANTUL</title>
+  <link rel="stylesheet" href="src/leaflet.css">
+  <link rel="stylesheet" href="src/css/bootstrap.css">
+  <script src="src/leaflet-src.js"></script>
+  <script src=" src/jquery.min.js"></script>
+  <script src="src/plugin/leaflet.ajax.min.js"></script>
+  <script src="src/plugin/leaflet-providers.js"></script>
+
+ 
+
+  <style>
+    #mapdiv {
+      height: 100vh;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+    <div id="side-bar" class="col-md-3"></div>
+    <div id="mapdiv" class="col-md-9"></div>
+
+    <script>
+      var mymap;
+      var lyrOSM;
+      var lyrWaterColor;
+      var lyrTopo;
+      var lyrImagery;
+      var lyrOutdoors;
+      var lyrDataSekolah;
+      var lyrPertanian;
+      var lyrJalan;
+      var ct1Layers;
+      var objBasemaps;
+      var objOverlays;
+      
+
+
+      $(document).ready(function () {
+        mymap = L.map('mapdiv', {
+          center: [-7.870280293383492, 110.31536730369663],
+          zoom: 14
+        });
+        // BASEMAP
+
+        lyrOSM = L.tileLayer.provider('OpenStreetMap.Mapnik');
+        lyrTopo = L.tileLayer.provider('OpenTopoMap');
+        lyrImagery = L.tileLayer.provider('Esri.WorldImagery');
+        lyrOutdoors = L.tileLayer.provider('Thunderforest.Outdoors');
+        lyrWaterColor = L.tileLayer.provider('Stamen.Watercolor');
+        mymap.addLayer(lyrOSM);
+       
+        lyrDataSekolah = L.geoJSON.ajax('data_update1/bantul_sekolah.geojson').addTo(mymap);
+        lyrPertanian = L.geoJSON.ajax('data_update1/bantul_pertanian.geojson').addTo(mymap);
+        lyrJalan = L.geoJSON.ajax('data_update1/bantul_jalan.geojson').addTo(mymap);
+  
+
+                // new L.GeoJSON.Ajax.WRImassifs().addTo(map); // French mountain limits
+        // Setup layer control
+        objBasemaps ={
+          "Open Street Map":lyrOSM,
+          "Topo Map" :lyrTopo,
+          "Imagery" :lyrImagery,
+          "Outdoors": lyrOutdoors,
+          "WaterColor":lyrWaterColor
+        };
+
+        objOverlays ={};
+        ct1Layers = L.control.layers(objBasemaps, objOverlays).addTo(mymap);
+        });
+    </script>
+
+</body>
+
+</html>

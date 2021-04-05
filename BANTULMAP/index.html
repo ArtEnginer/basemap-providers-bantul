@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WEBMAP|BANTUL</title>
+  <link rel="stylesheet" href="src/leaflet.css">
+  <link rel="stylesheet" href="src/css/bootstrap.css">
+  <script src="src/leaflet-src.js"></script>
+  <script src=" src/jquery.min.js"></script>
+  <script src="src/plugin/leaflet.ajax.min.js"></script>
+  <style>
+    #mapdiv {
+      height: 100vh;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <body>
+    <div id="side-bar" class="col-md-3"></div>
+    <div id="mapdiv" class="col-md-9"></div>
+    <script>
+      var mymap;
+      var lyrOSM;
+      var lyrDataSekolah;
+      var lyrPertanian;
+      var lyrJalan;
+
+
+      $(document).ready(function () {
+        mymap = L.map('mapdiv', {
+          center: [-7.870280293383492, 110.31536730369663],
+          zoom: 14
+        });
+        lyrOSM = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
+        mymap.addLayer(lyrOSM);
+        lyrDataSekolah = L.geoJSON.ajax('data/BANTUL_SEKOLAH.geojson').addTo(mymap);
+        lyrPertanian = L.geoJSON.ajax('data/BANTUL_PERTANIAN.geojson').addTo(mymap);
+        lyrJalan = L.geoJSON.ajax('data/BANTUL_JALAN.geojson').addTo(mymap);
+
+        // new L.GeoJSON.Ajax.WRImassifs().addTo(map); // French mountain limits
+
+      });
+    </script>
+  </body>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+"type": "FeatureCollection",
+"name": "SMA_CILACAP",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "SMA Negeri 1 Cilacap", "descriptio": null, "timestamp": null, "begin": null, "end": null, "altitudeMo": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 109.0055178473051, -7.714550271011232, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "SMA Negeri 1 Adipala", "descriptio": null, "timestamp": null, "begin": null, "end": null, "altitudeMo": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 109.177907182207804, -7.641267323342671, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "SMA Jenderal Soedirman Cilacap", "descriptio": null, "timestamp": null, "begin": null, "end": null, "altitudeMo": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 109.0150714159535, -7.719012913956014, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "SMA Negeri 1 Cilacap", "descriptio": null, "timestamp": null, "begin": null, "end": null, "altitudeMo": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 109.035928062760107, -7.685997829711389, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "SMA NUSANTARA CILACAP", "descriptio": null, "timestamp": null, "begin": null, "end": null, "altitudeMo": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 109.085515199448096, -7.674244767876295, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "SMA Muhammadiyah 1 Cilacap", "descriptio": null, "timestamp": null, "begin": null, "end": null, "altitudeMo": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 109.033276772416897, -7.709714906060735, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "SMAN 3 Cilacap", "descriptio": null, "timestamp": null, "begin": null, "end": null, "altitudeMo": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 109.032084268569506, -7.704900676284918, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "SMA Yos Sudarso Cilacap", "descriptio": null, "timestamp": null, "begin": null, "end": null, "altitudeMo": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 109.010494374355204, -7.733062875856588, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "SMA Al-Irsyad Cilacap", "descriptio": null, "timestamp": null, "begin": null, "end": null, "altitudeMo": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 109.004465104605003, -7.727450925826574, 0.0 ] } }
+]
+}
